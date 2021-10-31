@@ -1,24 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
+import './styles/Header.css'
+import Tarifs from './components/Tarifs';
+import Header from './components/Header';
+import { createStore, applyMiddleware } from 'redux';
+import Thunk from 'redux-thunk';
+import { Provider } from 'react-redux';
+import reducers from './reducers';
+import RendezVous from './components/RendezVous';
+
+const store = createStore(reducers, {}, applyMiddleware(Thunk));
 
 function App() {
+  
   return (
+    <Provider store={store}>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Tarifs />
+      <RendezVous />
     </div>
+    </Provider>
   );
 }
 

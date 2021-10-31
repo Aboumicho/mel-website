@@ -1,0 +1,40 @@
+
+.Services{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    height: 12%;
+    margin-top: 2vh;
+    opacity: 0.6;
+}
+
+
+
+.liste-services{
+    display: flex;
+    flex-flow: column;
+    height: 80%;
+    justify-content: space-evenly;
+    margin-right: 5%;
+    margin-left: 1%;
+    margin-top: 1%;
+}
+
+.service-price{
+    font-family: serif;
+}
+
+.barber-pole-img{
+    height: 100%;
+    opacity: 0.3;
+    width: 75%;
+
+}
+.barber-pole-wrapper{
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    margin-top: 1%;
+    margin-right: 3%;
+    width: 50px;
+}
