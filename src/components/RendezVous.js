@@ -2,7 +2,8 @@ import "../styles/RendezVous.css"
 import Select from 'react-select'
 import makeAnimated from 'react-select/animated';
 import { useSelector, useDispatch } from 'react-redux';
-
+import 'react-calendar/dist/Calendar.css';
+import { Calendrier } from "./Calendrier";
 function RendezVous() {
     const dispatch = useDispatch();
     const services = useSelector((state) => state.loadServices)
@@ -17,7 +18,7 @@ function RendezVous() {
       const display = selected.isSelected ? "flex" : "none"
 
     return (
-      <div className="container" style={{display: display}}>
+      <div id="container-rendez-vous" className="container" style={{display: display}}>
             <div className="container-box">
             <div className="form">
       <div className="title">Rendez-Vous</div>
@@ -39,6 +40,7 @@ function RendezVous() {
         <div className="cut cut-short"></div>
         <label for="email" className="placeholder">Email</label>
       </div>
+      <Calendrier />
       <button type="text" className="submit">submit</button>
     </div>            </div>
       </div>

@@ -103,7 +103,7 @@
     cursor: pointer;
     font-size: 18px;
     height: 7vh;
-    margin-top: 38px;
+    margin-top: 5%;
     outline: 0;
     text-align: center;
     width: 100%;
@@ -121,4 +121,14 @@
 .css-14el2xx-placeholder{
     color: white!important;
     font-weight: 500;
+}
+
+#container-rendez-vous{
+  height: unset;
+}
+
+.react-calendar{
+  width:100%!important;
+  margin-top: 5%;
+  border-radius: 12px;
 }
