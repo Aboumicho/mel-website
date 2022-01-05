@@ -14,7 +14,6 @@ const INITIAL_STATE = {
 }
 
 const LoadServices = (state=INITIAL_STATE, action) =>{
-    console.log("REDUCER ", action)
     switch(action.type){
         default:
             return state

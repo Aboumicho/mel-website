@@ -11,11 +11,11 @@ import RendezVous from './components/RendezVous';
 import { Provider as AlertProvider } from 'react-alert'
 import AlertTemplate from 'react-alert-template-basic'
 import options from './components/Alert-Options'
-
 const store = createStore(reducers, {}, applyMiddleware(Thunk));
 
 function App() {
-  
+
+
   return (
     <Provider store={store}>
       <AlertProvider template={AlertTemplate} {...options}>

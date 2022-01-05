@@ -28,10 +28,7 @@ const titleDisabled = ({ date, view }) => {
     const dateDay = date.getDate()
     const dateMonth = date.getMonth()
     const dateYear = date.getFullYear()
-    // console.log("Date ", date)
-    // console.log("Month ", date.getMonth() )
-    // console.log("Day" , date.getDate())
-    // console.log("Year ", dateYear)
+
 
     //same MONTH, same YEAR, different DAY
     if(todaysDate.getMonth() == dateMonth && todaysDate.getFullYear() == date.getFullYear() ){

@@ -11,7 +11,6 @@ import { useSelector, useDispatch } from 'react-redux';
 function Tarifs() {
   const dispatch = useDispatch();
   const services = useSelector((state) => state.loadServices)
-  console.log("TARIFS > SERVICES", services)
   const listeServices = services.services
 
     const elements_nmbr = listeServices.length
