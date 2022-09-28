@@ -14,9 +14,9 @@ function RendezVous() {
         selectOptions = selectOptions.concat({value: _options[op], label: _options[op] })
     }
     const options = selectOptions
-      const selected = useSelector((state) => state.selectedButton)
+      const selected = useSelector((state) => state.service)
       const display = selected.isSelected ? "flex" : "none"
-
+      console.log("Selected > " , selected)
     return (
       <div id="container-rendez-vous" className="container" style={{display: display}}>
             <div className="container-box">

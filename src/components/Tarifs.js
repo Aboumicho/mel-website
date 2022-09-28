@@ -9,7 +9,6 @@ import CombCutColor from '../images/CombCutColor.png'
 import { useSelector, useDispatch } from 'react-redux';
 
 function Tarifs() {
-  const dispatch = useDispatch();
   const services = useSelector((state) => state.loadServices)
   const listeServices = services.services
 

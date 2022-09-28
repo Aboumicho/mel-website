@@ -7,7 +7,7 @@ var Scroll = require('react-scroll');
 function Service({service, elements_nmbr}) {
     const sizeElement = 100/elements_nmbr - 2
     const dispatch = useDispatch();
-    const selected = useSelector((state) => state.selectedButton.SelectedButton)
+    const selected = useSelector((state) => state.service.SelectedButton)
     let scroll    = Scroll.animateScroll;
     
     function scrollToBottom() {

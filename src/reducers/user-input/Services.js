@@ -4,7 +4,7 @@ const INITIAL_STATE = {
     selection: ""
 }
 
-const SelectedButton = (state=INITIAL_STATE, action) =>{
+const Services = (state=INITIAL_STATE, action) =>{
 
     switch(action.type){
         case "SELECTED":
@@ -20,4 +20,4 @@ const SelectedButton = (state=INITIAL_STATE, action) =>{
     }
 }
 
-export default SelectedButton
+export default Services

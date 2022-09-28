@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
-import SelectedButton from './SelectedButton';
+import Services from './user-input/Services';
 import LoadServices from './Services';
 export default combineReducers({
-    selectedButton: SelectedButton,
+    service: Services,
     loadServices: LoadServices
 });

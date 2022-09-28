@@ -1,0 +1,12 @@
+.react-calendar{
+    font-weight: 700;
+}
+
+.react-calendar__tile {
+    min-height: 8vh;
+}
+
+.react-calendar__navigation{
+    min-height: 10vh;
+}
+

@@ -137,3 +137,6 @@
   color: #DAA520 !important;
   font-size: 25px;
 }
+.react-calendar__tile .react-calendar__month-view__days__day {
+  min-height: 5rem;
+}
