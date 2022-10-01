@@ -1,0 +1,15 @@
+type Business {
+    name: String!
+    businessServices: [businessServices]
+}
+
+type businessServices{
+    nameOfService: String!
+    priceOfService: String!
+    descriptionOfService: String!
+    timeOfService: String!
+}
+
+type Query {
+  businesses: [businessServices]
+}
