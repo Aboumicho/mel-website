@@ -1,3 +1,4 @@
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import './styles/Header.css'
@@ -11,12 +12,15 @@ import RendezVous from './components/RendezVous';
 import { Provider as AlertProvider } from 'react-alert'
 import AlertTemplate from 'react-alert-template-basic'
 import options from './components/Alert-Options'
+import ApolloConfig from './apollo';
 const store = createStore(reducers, {}, applyMiddleware(Thunk));
+
 
 function App() {
 
 
   return (
+  <ApolloConfig>
     <Provider store={store}>
       <AlertProvider template={AlertTemplate} {...options}>
     <div className="App">
@@ -26,6 +30,7 @@ function App() {
     </div>
     </AlertProvider>
     </Provider>
+    </ApolloConfig>
   );
 }
 

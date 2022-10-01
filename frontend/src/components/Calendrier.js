@@ -1,16 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import Calendar from 'react-calendar';
-import { useAlert } from 'react-alert'
 import 'react-calendar/dist/Calendar.css';
 import '../styles/Calendrier.css';
 import titleDisabled from '../lib/titleDisabled';
 import usePrevious from '../lib/usePrevious';
 import Select from 'react-select'
 
-import makeAnimated from 'react-select/animated';
 import { useSelector, useDispatch } from 'react-redux';
-import firebasedb from '../firebase/firebase';
-import { collection, getDocs } from 'firebase/firestore/lite';
 import {returnTimesInBetween} from '../lib/DateFormatter'
 import getGenTime from '../lib/DateFormatter'
 import { updateDate } from '../actions/form/formHandler';
@@ -20,7 +16,7 @@ export function Calendrier(){
     const [value, onChange] = useState(new Date());
     const {date} = useSelector((state) => {
         return {
-          date:state.formHandler.date
+          date: state.formHandler.date
         }
       });
     const dispatch = useDispatch();

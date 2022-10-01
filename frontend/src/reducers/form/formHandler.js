@@ -31,6 +31,13 @@ const formHandler = (state=INITIAL_STATE, action) =>{
                     ...state
                 }
             } 
+            case "SUBMIT_FORM" : {
+                //submitFunction that calls graphql
+                console.log("")
+                return{
+                    ...state
+                }
+            }
         default:
             return state
 
