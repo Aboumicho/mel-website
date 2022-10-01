@@ -13,11 +13,21 @@ import firebasedb from '../firebase/firebase';
 import { collection, getDocs } from 'firebase/firestore/lite';
 import {returnTimesInBetween} from '../lib/DateFormatter'
 import getGenTime from '../lib/DateFormatter'
+import { updateDate } from '../actions/form/formHandler';
 
 export function Calendrier(){
     let timesInBetween, options
     const [value, onChange] = useState(new Date());
-    console.log("value : ", value)
+    const {date} = useSelector((state) => {
+        return {
+          date:state.formHandler.date
+        }
+      });
+    const dispatch = useDispatch();
+    useEffect(()=>{
+        dispatch(updateDate(value))
+    }, [date])
+    console.log("date : ", date)
     //Previous selected date ex: Thu Dec 30 2021 15:30:28 GMT-0500 (Eastern Standard Time)
     const prevDate = usePrevious(value);
     //Selected day, month and year 

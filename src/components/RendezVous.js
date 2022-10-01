@@ -4,6 +4,7 @@ import makeAnimated from 'react-select/animated';
 import { useSelector, useDispatch } from 'react-redux';
 import 'react-calendar/dist/Calendar.css';
 import { Calendrier } from "./Calendrier";
+import {updateFirstName , updateLastName, updateEmail} from '../actions/form/formHandler'
 function RendezVous() {
     const dispatch = useDispatch();
     const services = useSelector((state) => state.loadServices)
@@ -14,9 +15,13 @@ function RendezVous() {
         selectOptions = selectOptions.concat({value: _options[op], label: _options[op] })
     }
     const options = selectOptions
-      const selected = useSelector((state) => state.service)
+
+      const {selected} = useSelector((state) => {
+        return {
+          selected:state.service
+        }
+      });
       const display = selected.isSelected ? "flex" : "none"
-      console.log("Selected > " , selected)
     return (
       <div id="container-rendez-vous" className="container" style={{display: display}}>
             <div className="container-box">
@@ -25,18 +30,18 @@ function RendezVous() {
       {/* <div className="subtitle">Let's create your account!</div> */}
       <Select styles={{background:"#303245"}} options={options} makeAnimated={makeAnimated} value={selected.selection} placeholder={selected.selection} onChange={(event) => {dispatch({type: "SELECTED", payload: event.value}) }} />
       <div className="input-container ic1">
-        <input id="firstname" className="input" type="text" placeholder=" " />
+        <input id="firstname" className="input" type="text" placeholder=" " onChange={(event)=> {dispatch(updateFirstName(event.target.value))}}/>
         <div className="cut"></div>
         <label for="firstname" className="placeholder">First name</label>
       </div>
       <div className="input-container ic2">
-        <input id="lastname" className="input" type="text" placeholder=" " />
+        <input id="lastname" className="input" type="text" placeholder=" " onChange={(event) => {dispatch(updateLastName(event.target.value))}} />
         <div className="cut"></div>
         <label for="lastname" className="placeholder">Last name</label>
       </div>
       
       <div className="input-container ic2">
-        <input id="email" className="input" type="text" placeholder=" " />
+        <input id="email" className="input" type="text" placeholder=" " onChange={(event) => {dispatch(updateEmail(event.target.value))}}/>
         <div className="cut cut-short"></div>
         <label for="email" className="placeholder">Email</label>
       </div>

@@ -2,6 +2,7 @@ import "../styles/Service.css"
 import BarberPole from '../images/BarberPole.png'
 import { useSelector, useDispatch } from 'react-redux';
 import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { selectedService } from "../actions/service/index";
 var Scroll = require('react-scroll');
 
 function Service({service, elements_nmbr}) {
@@ -16,7 +17,8 @@ function Service({service, elements_nmbr}) {
 
     return (
     <div className="Service-container" style={{height: sizeElement + "%"}} onClick={() => {
-      dispatch({type: "SELECTED", payload: service.service }) 
+      
+      dispatch(selectedService(service.service)) 
       scrollToBottom()
       }}  >
       <Link> </Link>
