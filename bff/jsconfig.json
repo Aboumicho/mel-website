@@ -1,4 +1,12 @@
 {
-    "target": "es6",
-    "module": "es6",
+"compilerOptions": {
+    "baseUrl": "src", 
+    "target": "es2019",
+    "esModuleInterop": true,
+    "module" : "CommonJS",
+    "sourceMap": true,
+},
+"include": [
+    "./src/**/*" , "./src/**/*.js"
+]
 }

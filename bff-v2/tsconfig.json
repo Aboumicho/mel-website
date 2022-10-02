@@ -1,0 +1,12 @@
+{
+    "exclude": ["./src/**/*.spec.ts"],
+    "compilerOptions": {
+        "baseUrl": "src",
+        "target": "es2019",
+        "esModuleInterop": true,
+        "module": "commonJS",
+        "sourceMap": true,
+        "outDir": "dirst"
+    },
+    "include": ["./src/**/*" , "./src/**/*.ts"]
+}

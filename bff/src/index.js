@@ -66,18 +66,25 @@
 //   server.listen().then(({ url }) => {
 //     console.log(`🚀  Server ready at ${url}`);
 //   });
-import schema from "./schema.js";
+import {schema} from "./src/schema.js";
 import express from "express";
 import { graphqlHTTP } from "express-graphql";
+import { resolver } from "./src/resolver.js";
 const PORT = 4000;
 const app = express();
 
-app.use('/graphql' , 
-graphqlHTTP({
-        schema: schema,
-        graphiql:true
-    }))
 
-app.listen(PORT, () =>{
-    console.log(`Server running on port ${PORT}`)
-} )
+const run = () => {
+    app.use('/graphql' , 
+    graphqlHTTP({
+            schema: schema,
+            rootValue: resolver,
+            graphiql:true
+        }))
+    
+    app.listen(PORT, () =>{
+        console.log(`Server running on port ${PORT}`)
+    } )
+}
+
+run();

@@ -1,0 +1,28 @@
+scalar Upload
+
+type Customer {
+    name: String
+    id: String
+}
+
+type BusinessService{
+    nameOfService: String
+    priceOfService: String
+    descriptionOfService: String
+    timeOfService: String
+}
+
+type Business{
+    name: String
+    businessService: [BusinessService]
+}
+
+type Query{
+    getBusinesses:[Business]
+}
+
+
+
+schema{
+    query: Query
+}
