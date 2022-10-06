@@ -1,8 +1,7 @@
-import dataSources from "../../data-sources";
 import BusinessApi from "../../data-sources/business-api";
 
-export default async (_, {id}, {dataSources} ) =>{
-    return dataSources.BusinessApi.getBusinesses();
-
-    
+export default async ( ) =>{
+    const getBusinessApi = new BusinessApi();
+    const response = await getBusinessApi.getBusinesses();
+    return response.body;
 }

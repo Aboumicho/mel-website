@@ -7,16 +7,16 @@ export default abstract class CustomRestDataSource extends RESTDataSource{
     }
 
     protected willSendRequest(request: RequestOptions): void | Promise<void> {
-        console.log("REQUEST ", request)
+        
     }
 
     protected async didReceiveResponse<TResult = any>(
         response: Response,
         _request: Request
     ): Promise<TResult>{
-        console.log("RESPONSE ", response)
         if(response.status >= 200 && response.status < 300){
             const contentType = response.headers.get("Content-Type");
+            console.log("contentType", contentType);
             return (this.parseBody(response) as any) as Promise<TResult>;
         }
         else{

@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack",
-    "generate" : "graphql --codegen"
+    "generate" : "graphql-codegen"
   },
   "repository": {
     "type": "git",
@@ -34,6 +34,8 @@
     "webpack-node-externals": "^3.0.0"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "2.13.3",
+    "@graphql-codegen/typescript": "2.7.3",
     "webpack-cli": "^4.10.0",
     "@types/graphql-upload": "^8.0.4",
     "graphql" : "^15.3.0"

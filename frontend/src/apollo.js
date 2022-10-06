@@ -24,9 +24,9 @@ const ApolloConfig = (props) => {
       );
     }
   
-    if (networkError) {
-      console.log(`[Network error]: ${networkError}`);
-    }
+    // if (networkError) {
+    //   console.log(`[Network error]: ${networkError}`);
+    // }
   });
   
   const link = ApolloLink.from([errorLink, httpLink]);
