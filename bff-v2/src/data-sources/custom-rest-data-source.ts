@@ -7,7 +7,8 @@ export default abstract class CustomRestDataSource extends RESTDataSource{
     }
 
     protected willSendRequest(request: RequestOptions): void | Promise<void> {
-        
+        request.headers.set('json', 'true');
+        request.headers.set('Access-Control-Allow-Origin', 'true');
     }
 
     protected async didReceiveResponse<TResult = any>(
@@ -15,8 +16,7 @@ export default abstract class CustomRestDataSource extends RESTDataSource{
         _request: Request
     ): Promise<TResult>{
         if(response.status >= 200 && response.status < 300){
-            const contentType = response.headers.get("Content-Type");
-            console.log("contentType", contentType);
+            const contentType = response.headers.get("content-type");
             return (this.parseBody(response) as any) as Promise<TResult>;
         }
         else{

@@ -11,7 +11,10 @@ type BusinessService{
 }
 
 type Business{
-    name: String
+    firstName: String
+    lastName: String
+    email: String
+    type: String
     businessService: [BusinessService]
 }
 
