@@ -1,0 +1,10 @@
+.Header{
+    height: 10%;
+    /* background:linear-gradient(#DAA520,	black 50%); */
+    background-color: black;
+    /* background-color:orange  */
+    display: flex;
+    justify-content: center;
+    flex-flow: row;
+    color: yellow;
+}

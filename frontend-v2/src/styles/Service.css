@@ -1,0 +1,105 @@
+.Service{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    height: 70%;
+    width: 95%;
+    position: absolute;
+    padding: 10%;
+}
+
+.service-text{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.Service-container{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    background: #202020;
+    border-radius: 14px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 5%;
+    margin-left: 2%;
+}
+.service-price{
+    font-size: 18px;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    font-family: Roboto,Arial,Helvetica,sans-serif;
+    width: 25%;
+    font-weight: 500;
+    background: #282828;
+    width: 7vh;
+    justify-content: center;
+    display: flex;
+    flex-flow: row;
+
+}
+
+p{
+    margin-bottom: 0;
+    z-index: 10;
+    border-radius: 3px;
+    color: "#DAA52";
+}
+
+.service-offert{
+    font-size: 21px;
+    font-family: Roboto Black,Roboto,Arial Black,Arial,Helvetica,sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-top: 0;
+    background-color: black;
+}
+
+h2{
+    font-size: 42px;
+}
+
+.button-wrapper{
+    width: 28%;
+}
+button{
+    width: 100%;
+}
+
+.background-button{
+    opacity: 0.4;
+    height: 100%;
+    width: 100%;
+}
+
+.service-block{
+    display: flex;
+}
+
+.image-container{
+    background-image: linear-gradient( 180deg ,rgb(250,250,210) 10%,rgb(255,215,0) 40%,rgb(128, 85, 0));
+    opacity: 0.4;
+}
+
+.Service-container:hover{
+    background-image: linear-gradient( 
+        180deg
+        ,rgb(250,250,210) 10%,rgb(255,215,0) 40%,rgb(229,170,112));
+    transition: opacity .5s;
+    opacity: 0.8;
+    
+}
+
+.Text-container{
+    display: flex;
+}
+
+@media only screen and (min-width: 768px) {
+    .service-offert{
+        font-size: 35px;
+    }
+    .service-price{
+        font-size: 36px;
+    }
+}
