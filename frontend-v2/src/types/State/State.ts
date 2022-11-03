@@ -1,3 +1,6 @@
+import {Services} from "./services"
+
 export interface State {
-    name: string;
+    services: Services;
+    
 }

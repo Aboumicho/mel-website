@@ -1,3 +1,4 @@
 export interface Services {
-    name: string;
+    isSelected: boolean,
+    selection: string
 }

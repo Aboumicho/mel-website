@@ -8,7 +8,7 @@ interface Props{
 
 const ApolloConfig = (props : Props) => {
 
-  const GRAPHQL_URL = 'http://localhost:5000/bff/';
+  const GRAPHQL_URL : string = 'http://localhost:5000/bff/graphql';
 
   const httpLink = new HttpLink({
     uri: GRAPHQL_URL,
@@ -35,7 +35,7 @@ const ApolloConfig = (props : Props) => {
   
   const link: ApolloLink = ApolloLink.from([errorLink, httpLink]);
   
-  const cache = new InMemoryCache();
+  const cache= new InMemoryCache();
   
   const client: any = new ApolloClient({
     link,

@@ -17,7 +17,6 @@ export default class BusinessApi extends CustomRestDataSource {
     protected async didReceiveResponse<TResult = any>(response, _request) {
         if(response.status >= 200 && response.status < 300){
             const contentType = response.headers.get("content-type");
-            console.log("RESPONSE didReceiveResponse > " );
             return (response.json() as any) as Promise<TResult>;
         }
         else{
