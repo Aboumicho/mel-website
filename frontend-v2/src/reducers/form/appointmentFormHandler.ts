@@ -1,8 +1,17 @@
+interface FormHandlerState {
+    firstName: string,
+    lastName: string,
+    email:string,
+    services: Array<any>,
+    date: any
 
-const INITIAL_STATE = {
+}
+
+const INITIAL_STATE : FormHandlerState = {
     firstName: "",
     lastName: "",
     email:"",
+    services: [],
     date: undefined
 
 }
@@ -31,6 +40,11 @@ const formHandler = (state=INITIAL_STATE, action:any) =>{
                     ...state
                 }
             } 
+            case "SERVICE_SELECT":
+                state.services.push(action.payload)
+                return  {
+                    ...state,
+                }
             case "SUBMIT_FORM" : {
                 //submitFunction that calls graphql
                 console.log("")
