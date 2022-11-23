@@ -3,7 +3,8 @@ interface FormHandlerState {
     lastName: string,
     email:string,
     services: Array<any>,
-    date: any
+    date: any,
+    formStatus: string
 
 }
 
@@ -12,7 +13,8 @@ const INITIAL_STATE : FormHandlerState = {
     lastName: "",
     email:"",
     services: [],
-    date: undefined
+    date: undefined,
+    formStatus: ""
 
 }
 
@@ -52,6 +54,13 @@ const formHandler = (state=INITIAL_STATE, action:any) =>{
                     ...state
                 }
             }
+            case "UPDATE_FORM_STATUS" : {
+                state.formStatus = action.payload
+                return {
+                    ...state
+                }
+            }
+
         default:
             return state
 

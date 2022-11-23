@@ -17,3 +17,7 @@ export const updateDate=(dateSelectedValue:string) => {
 export const submitForm=()=>{
     return{type: "SUBMIT_FORM" }
 }
+
+export const updateFormStatus = (formStatus: string) => {
+    return {type: "UPDATE_FORM_STATUS", payload: formStatus}
+}
