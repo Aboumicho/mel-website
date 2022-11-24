@@ -5,7 +5,7 @@ import CustomRestDataSource from "./custom-rest-data-source";
 export default class BusinessApi extends CustomRestDataSource {
     contextApiEndpoint : string;
     baseUrl: string;
-    BUSINESSES_ENDPOINT: string = "businesses/firstname/lastname/email/";
+    BUSINESSES_ENDPOINT: string = "business/allBusinesses/";
 
     constructor(){
         super();
@@ -26,12 +26,11 @@ export default class BusinessApi extends CustomRestDataSource {
     }
 
     _getResponse(endpoint, query, headers){
-        return this.get(`businessOwner/firstname/lastname/email/`);
+        return this.get(this.baseURL + this.BUSINESSES_ENDPOINT);
     }
 
      getBusinesses(){
         let response = this._getResponse(this.BUSINESSES_ENDPOINT, null , null )
-        
         return response;
     }
 

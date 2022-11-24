@@ -15,10 +15,11 @@ export type Scalars = {
 export type Business = {
   __typename?: 'Business';
   businessService?: Maybe<Array<Maybe<BusinessService>>>;
+  business_entity_id?: Maybe<Scalars['Int']>;
+  business_user_id?: Maybe<Scalars['Int']>;
   email?: Maybe<Scalars['String']>;
-  firstName?: Maybe<Scalars['String']>;
-  lastName?: Maybe<Scalars['String']>;
-  type?: Maybe<Scalars['String']>;
+  name?: Maybe<Scalars['String']>;
+  phone?: Maybe<Scalars['String']>;
 };
 
 export type BusinessService = {
